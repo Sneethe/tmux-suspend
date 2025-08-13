@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -e
 
-declare -r CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+declare -r CURRENT_DIR="${0:A:h}"
 
 tmux_option() {
   local -r option=$(tmux show-option -gqv "$1")

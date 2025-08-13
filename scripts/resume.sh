@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 set -eu
 
@@ -7,7 +7,7 @@ set_options_for_resumed_state() {
 
   local _options="${1#,}"
   _options="${_options//\\,/${escaped_delim}}"
-  IFS=, read -ra options <<< "${_options}"
+  IFS=, read -r options <<< "${_options}"
 
   local flags=""
   local name=""
